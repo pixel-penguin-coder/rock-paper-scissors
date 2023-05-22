@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="hand-solid.svg">
+    <script src="https://kit.fontawesome.com/fd46d4bef5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <header>
+                    <h1 class="title">Rock Paper Scissors</h1>
+                    <p class="desc">Lets play a Game!</p>
+                </header>
+                <section>
+                    <div id="computer">
+                        <h2>COMPUTER: <span id="computer-score" class="score">0</span></h2>
+                        <h3 id="computer-choice" class="flex-column"></h3>
+                    </div>
+                    <h2 class="hidden" id="tie">TIE!</h2>
+                    <div id="player">
+                        <h2>PLAYER: <span id="player-score" class="score">0</span></h2>
+                        <h3 id="player-choice" class="flex-column"></h3>
+                    </div>
+                </section>
+                <div class="flex-column">
+                    <h3>Choose:</h3>
+                    <div class="button-stack">
+                        <button type="button" value="rock">Rock</button>
+                        <button type="button" value="paper">Paper</button>
+                        <button type="button" value="scissors">Scissors</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card-back flex-column transform">
+                <h1 id="result "class="result"></h1>
+                <button type="button" id="play-again" value="play-again">Play again</button>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
