@@ -22,11 +22,16 @@ function updateGameState(playerSelection, computerSelection) {
     if ((playerSelection === 'rock' && computerSelection === 'paper') || 
     (playerSelection === 'scissors' && computerSelection === 'rock') ||
     (playerSelection === 'paper' && computerSelection === 'scissors')) {
-        computerScore.textContent = parseInt(computerScore.textContent) + 1;
+        incrementScore(computerScore)
     } else if (playerSelection !== computerSelection) {
-        playerScore.textContent = parseInt(playerScore.textContent) + 1;
+        incrementScore(playerScore);
     }
     showResult(parseInt(playerScore.textContent), parseInt(computerScore.textContent));
+}
+
+function incrementScore (scoreElement) {
+    const score = +scoreElement.textContent;
+    scoreElement.textContent = score + 1;
 }
 
 function showResult(playerScore, computerScore) {
